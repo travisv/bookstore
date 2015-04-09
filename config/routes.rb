@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'home#index'
+  post 'add_book/:book_id' => 'users#add_book', :as => 'add_book'
+
+  resources :users
+  resources :books
   # The priority is bad upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

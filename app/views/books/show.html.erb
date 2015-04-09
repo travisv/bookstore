@@ -1,0 +1,7 @@
+<div class='text-center'>
+<h2><%= @book.title %></h2>
+<p><strong><%= @book.author %></strong></h6>
+<p><%= @book.review %></p>
+</div>
+
+<%= button_to 'Add to Cart', add_book_path(@book) %>
